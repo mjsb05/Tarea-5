@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 5</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+    <div class=" ancho margen contenedor_cabecera">
+        <div class="contenedor_cabecera_logo">
+            <img src="imagenes/logocabecera.jpg" alt="">
+        </div>
+        <div class="contenedor_cabecera_redes">
+            <a href="#">
+                <img src="imagenes/icono_facebook.jpg" alt="">
+            </a>
+            <a href="#">
+                <img src="imagenes/icono_instagram.jpg" alt="">
+            </a>
+            <a href="#">
+                <img src="imagenes/icono_twitter.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class=" ancho centrar negrita contenedor_appbar">
+        <a href="#">GALERIA</a>
+        <a href="#">PRECIOS</a>
+        <a href="#">CONTACTANOS</a>
+        <a href="#">EQUIPO</a>
+    </div>
+    <div class="ancho margen centrar contenedor_banner">
+        <h1>PROMOCIONES DE MARZO</h1>
+        <p>Se acerca la epoca de playa y por eso opreparamos estas dos promociones ideales para ti.</p>
+        <a href="#" class="bttn_rosa">Solicitar Promoción</a>
+        <a href="#" class="bttn_transparente">ver Video</a>
+    </div>
+    <div class=" ancho margen contenedor_secc1">
+        <div class="contenedor_info_secc1">
+            <h2>Nuestros Productos</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae blanditiis deleniti, nesciunt minima debitis iure numquam ratione delectus est architecto nemo. Dolorum excepturi alias eveniet aspernatur? Deserunt, enim. Corrupti, repellendus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem excepturi eveniet labore officiis, nobis pariatur, vitae amet voluptatum atque placeat quia nihil. Nostrum inventore odit, architecto enim facere excepturi itaque!</p>
+        </div>
+        <div class="contenedor_foto_secc1">
+            <img src="imagenes/fotovelas.jpg" alt="">
+        </div>
+    </div>
+    <div class=" ancho margen centrar contenedor_secc2">
+        <h2>Buscamos Talento a nuestro equipo</h2>
+        <div class="contenedor_foto_secc2">
+            <img src="imagenes/fotoaromatizante.jpg" alt="">
+        </div>
+    <div class="contenedor_info_secc2">
+        <h4>Puesto de trabajo para Recepcionista</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis porro ullam distinctio, numquam hic aliquam cumque, rerum illo iste saepe voluptates eius facilis earum fugiat nobis voluptas sint sequi beatae!</p>
+        <h4>Puesto de trabajo para Masajista</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis porro ullam distinctio, numquam hic aliquam cumque, rerum illo iste saepe voluptates eius facilis earum fugiat nobis voluptas sint sequi beatae!</p>
+        <h4>Puesto de trabajo para Nutriólogo</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis porro ullam distinctio, numquam hic aliquam cumque, rerum illo iste saepe voluptates eius facilis earum fugiat nobis voluptas sint sequi beatae!</p>
+    </div>
+    </div>
+    <div class=" ancho margen contenedor_secc3">
+        <div class="contenedor_noticias_secc3">
+            <h2>Recibe noticias y promociones de SPA SALON</h2>
+            <p>Un lugar para consertirte de pies a cabeza Servicio de salón estéticay Spa personalizado</p>
+            <a href="tel"><span class="rosa">TELEFONO:</span> 999 420 8871</a>
+            <br>
+            <a href="mailto"><span class="rosa">CORREO:</span> info@spasalon.com</a>
+            <form action="guardar.php" method="get" name="suscripcion" id="suscripcion">
+                <label for="email" class="negrita">Tu dirección de correo electrónico</label>
+                <input type="email" name="email" id="email" placeholder="tunombre@example.com">
+                <button type="button" id="enviar" class="bttn_formulario">Enviar</button>
+            </form>
+        </div>
+        <div class="contenedor_instalaciones_secc3">
+            <h2>Nuestras instalaciones</h2>
+            <iframe src="https://www.youtube.com/embed/w4qaODLR_Xg?si=4hYV3DKYOXCMyWLS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="ancho margen contenedor_final">
+        <div class="logo_final">
+            <img src="imagenes/logo_spa.png" alt="">
+        </div>
+        <div class=" ancho contenedor_datos rosa derecha">
+            <p>Mauri José Sandoval Bobadilla</p>
+            <p>Programación Web</p>
+            <p>7SA</p>
+        </div>
+    </div>
+    <script>
+        $("#enviar").click(function(){
+
+        if($("#email").val().trim()== ''){
+            alert("Ingrese su correo electrónico");
+            $("#email").focus();
+            return false;
+        }
+        let expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!expresionCorreo.test($("#email").val().trim())){
+            alert("Escribe un correo electrónico válido");
+            $("#email").focus();
+            return false;
+        }
+
+        alert("Se a registrado correctamente");
+        $("#suscripcion").submit();
+        })
+    </script>
+</body>
+</html>
